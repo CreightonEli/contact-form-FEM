@@ -26,6 +26,10 @@ form {
     flex-direction: column;
 }
 
+form span {
+    font-size: 12pt;
+    margin: 15px 0 0;
+}
 
 .col {
     display: flex;
@@ -47,6 +51,7 @@ form {
 label {
     font-size: 12pt;
     margin: 15px 0 0;
+    cursor: pointer;
 }
 .asterisk {
     margin: 0 0 0 5px;
@@ -59,6 +64,10 @@ input[type="text"], input[type="email"], textarea {
     border: 1px solid var(--medium-grey);
     border-radius: 8px;
     resize: none;
+    cursor: pointer;
+}
+input[type="text"]:hover, input[type="email"]:hover {
+    border: 1px solid var(--medium-green);
 }
 
 .query-btn {
@@ -67,14 +76,18 @@ input[type="text"], input[type="email"], textarea {
     padding: 12px 12px 10px 20px;
     border: 1px solid var(--medium-grey);
     border-radius: 8px;
+    user-select: none;
     cursor: pointer;
 }
-// .query-btn:hover {
-
-// }
-svg {
-    display: none;
+.query-btn:active {
+    background-color: var(--light-green);
+    border-color: var(--medium-green);
 }
+.query-btn.checked {
+    background-color: var(--light-green);
+    border-color: var(--medium-green);
+}
+
 .query-btn span{
     font-size: 13.5pt;
     margin: 0 0 0 7px;
@@ -82,6 +95,10 @@ svg {
 }
 .query-btn:nth-child(2) {
     margin: 19px auto 11px 16px;
+}
+
+svg {
+    display: none;
 }
 
 input[type="radio"] {
@@ -92,6 +109,7 @@ input[type="radio"] {
     border-radius: 50%;
     border: 2px solid var(--medium-grey);
     opacity: .55;
+    cursor: pointer;
 }
 input[type="radio"]:checked {
     display: none;
@@ -101,11 +119,12 @@ input[type="radio"]:checked + svg {
     margin: 2px 3px 0 5px;
 }
 
-
 textarea {
     height: 105px;
     box-sizing: border-box;
     margin: 11px 0 40px;
+    padding: 10px 12px 14px 23px;
+    line-height: 1.5;
 }
 
 input[type="checkbox"] {
@@ -142,6 +161,9 @@ input[type="submit"] {
     color: var(--white);
     cursor: pointer;
 }
+input[type="submit"]:hover {
+    background-color: hsl(171, 83%, 14%);
+}
 
 .error {
     display: none;
@@ -150,6 +172,31 @@ input[type="submit"] {
 
 #modal {
     display: none;
+    box-sizing: border-box;
+    position: absolute;
+    margin: 24px auto;
+    padding: 26px 24px 27px;
+    left: 0px;
+    right: 0px;
+    width: 450px;
+    background-color: hsl(185, 24%, 22%);
+    color: var(--white);
+    border-radius: 12px;
+}
+#modal svg {
+    display: inline;
+    margin: 0 6px 0 2px;
+}
+#modal-title {
+    vertical-align: super;
+    font-size: 13.5pt;
+    font-weight: 700;
+}
+#modal-message {
+    margin: 9px 0 0;
+    display: block;
+    color: var(--white);
+    opacity: .75;
 }
 
 .attribution { font-size: 11px; text-align: center; }
