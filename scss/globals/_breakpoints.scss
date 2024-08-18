@@ -1,0 +1,57 @@
+@media (max-width: 1280px) {
+    body {
+        padding:0 16px;
+    }
+    
+    main {
+        margin: 32px auto 12px;
+        padding: 1px 24px 24px;
+    }
+    
+    .row {
+        flex-direction: column;
+    }
+
+    .col:nth-child(2) {
+        margin: 0 auto 0 0;
+    }
+
+    .query-btn {
+        width: auto;
+    }
+    .query-btn:nth-child(2) {
+        margin: 5px 0 11px 0;
+    }
+
+    textarea {
+        height: 240px;
+    }
+
+    #check-row {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    input[type="checkbox"] {
+        min-width: 18px;
+        margin: auto 0 auto 3px;
+    }
+
+    input[type="checkbox"] + svg + label {
+        margin: -1px 0 0 19px;
+        line-height: 1.5;
+    }
+
+    input[type="checkbox"]:checked + svg {
+        margin: auto -2px auto 1px;
+        min-width: 22px;
+    }
+
+    input[type="submit"] {
+        margin: 41px 0 0;
+    }
+
+    #modal {
+        max-width: 283px;
+    }
+}
